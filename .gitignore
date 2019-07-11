@@ -1,0 +1,11 @@
+# dependencies
+node_modules
+
+# Server config
+config.js
+
+# build
+docker/build
+
+# other
+package-lock.json
