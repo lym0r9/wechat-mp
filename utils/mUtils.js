@@ -41,7 +41,7 @@ function fmtNormalXML (xml) {
         let val = item[0]
 
         if (typeof val === 'object') {
-          message[key] = formatMessage(val)
+          message[key] = fmtNormalXML(val)
         } else {
           message[key] = (val || '').trim()
         }
@@ -49,7 +49,7 @@ function fmtNormalXML (xml) {
         message[key] = []
 
         for (let j = 0; j < item.length; j++) {
-          message[key].push(formatMessage(item[j]))
+          message[key].push(fmtNormalXML(item[j]))
         }
       }
     }
